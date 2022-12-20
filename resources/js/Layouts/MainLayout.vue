@@ -11,7 +11,7 @@
 
 <script setup>
 import { Link, usePage } from '@inertiajs/inertia-vue3';
-import { ref, computed } from 'vue';
+import { computed } from 'vue';
 
 // page.props.value.flash.success
 const page = usePage();
