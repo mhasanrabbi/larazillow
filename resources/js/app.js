@@ -4,6 +4,14 @@ import MainLayout from '@/Layouts/MainLayout.vue';
 import { Ziggy } from './ziggy';
 import { ZiggyVue } from '/vendor/tightenco/ziggy/dist/vue.es';
 import '../css/app.css';
+import { InertiaProgress } from '@inertiajs/progress';
+
+InertiaProgress.init({
+  delay: 0,
+  color: '#29d',
+  includeCSS: true,
+  showSpinner: true,
+});
 
 createInertiaApp({
   resolve: async (name) => {
