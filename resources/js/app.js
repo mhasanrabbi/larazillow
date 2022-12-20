@@ -3,7 +3,7 @@ import { createInertiaApp } from '@inertiajs/inertia-vue3';
 import MainLayout from '@/Layouts/MainLayout.vue';
 import { Ziggy } from './ziggy';
 import { ZiggyVue } from '/vendor/tightenco/ziggy/dist/vue.es';
-
+import '../css/app.css';
 
 createInertiaApp({
   resolve: async (name) => {
