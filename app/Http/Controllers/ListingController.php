@@ -24,6 +24,7 @@ class ListingController extends Controller
             'priceFrom', 'priceTo', 'beds', 'baths', 'areaFrom', 'areaTo'
         ]);
 
+
         return inertia(
             'Listing/Index',
             [
@@ -48,6 +49,8 @@ class ListingController extends Controller
         //     abort(403);
         // }
         // $this->authorize('view', $listing);
+
+        $listing->load(['images']);
 
         return inertia(
             'Listing/Show',
