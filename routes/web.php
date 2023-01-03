@@ -46,7 +46,7 @@ Route::prefix('realtor')
             // ->only(['index', 'destroy', 'edit', 'update', 'create', 'store'])
             ->withTrashed();
 
-            Route::name('offer.accept')
+        Route::name('offer.accept')
             ->put(
                 'offer/{offer}/accept',
                 RealtorListingAcceptOfferController::class

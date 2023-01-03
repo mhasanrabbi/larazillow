@@ -22,7 +22,7 @@
         <Link
           v-if="notSold"
           :href="route('realtor.offer.accept', { offer: offer.id })" class="btn-outline text-xs font-medium"
-          as="button" method="put"
+          as="button" method="PUT"
         >
           Accept
         </Link>
