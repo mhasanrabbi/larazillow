@@ -44,6 +44,16 @@ class Listing extends Model
         return $this->orderByDesc('created_at');
     }
 
+    public function scopeWithoutSold(Builder $query): Builder
+    {
+        return $query->doesntHave('offers')
+            ->orWhereHas(
+                'offers',
+                fn (Builder $query) => $query->whereNull('accepted_at')
+                    ->whereNull('rejected_at')
+            );
+    }
+
     public function scopeFilter(Builder $query, array $filters): Builder
     {
         return $query->when(
